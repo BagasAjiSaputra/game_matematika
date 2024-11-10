@@ -1,119 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Orpix IO</title>
-  <link rel="icon" href="../public/images/heros/logos.png" sizes="any">
-  <link rel="preload" href="../styles/quiz.css" as="style" onload="this.rel='stylesheet'"> 
-<noscript><link rel="stylesheet" href="../styles/quiz.css"></noscript>
-<link rel="manifest" href="manifest.json">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Orpix IO</title>
+    <link rel="icon" href="../public/images/heros/logos.png" sizes="any" />
+    <link
+      rel="preload"
+      href="../styles/quiz.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="../styles/quiz.css" /></noscript>
+    <link rel="manifest" href="manifest.json" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-</head>
-<body>
-  <main>
-    <div class="bgs">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="bgs">
         <button class="home">
-            <img src="../public/images/heros/home.png" alt="">
+          <img src="../public/images/heros/home.png" alt="" />
         </button>
         <div class="tex">
-            <div class="tek">
-                <img src="../public/images/heros/24.png" alt="" class="papan">
+          <div class="tek">
+            <img src="../public/images/heros/24.png" alt="" class="papan" />
+          </div>
+          <div class="balok">
+            <div>
+              <button>
+                <img src="../public/images/heros/box.png" alt="" class="ubah" />
+              </button>
+              <button>
+                <img
+                  src="../public/images/heros/kosong.png"
+                  alt=""
+                  class="hlg"
+                />
+              </button>
+              <button>
+                <img
+                  src="../public/images/heros/kosong.png"
+                  alt=""
+                  class="hlg"
+                />
+              </button>
             </div>
-            <div class="balok">
-                <div>
-                    <button><img src="../public/images/heros/box.png" alt="" class="ubah"></button>
-                    <button><img src="../public/images/heros/kosong.png" alt="" class="hlg"></button>
-                    <button><img src="../public/images/heros/kosong.png" alt="" class="hlg"></button>
-                </div>
-                <div class="tali1">
-                    <img src="../public/images/heros/26.png" alt="">
-                </div>
-                <div>
-                    <button><img src="../public/images/heros/box.png" alt="" class="hj"></button>
-                    <button><img src="../public/images/heros/box.png" alt="" class="hj"></button>
-                    <button><img src="../public/images/heros/box.png" alt="" class="hlg1"></button>
-                </div>
-                <div class="tali2">
-                    <img src="../public/images/heros/26.png" alt="">
-                </div>
-                <div>
-
-                    <button><img src="../public/images/heros/box.png" alt=""></button>
-                    <button><img src="../public/images/heros/box.png" alt=""></button>
-                    <button><img src="../public/images/heros/box.png" alt=""></button>
-                </div>
+            <div class="tali1">
+              <img src="../public/images/heros/26.png" alt="" />
             </div>
-            <div class="counters">
-                <div class="counter">
-                    <h1>1</h1>
-                </div>
+            <div>
+              <button>
+                <img src="../public/images/heros/box.png" alt="" class="hj" />
+              </button>
+              <button>
+                <img src="../public/images/heros/box.png" alt="" class="hj" />
+              </button>
+              <button>
+                <img src="../public/images/heros/box.png" alt="" class="hlg1" />
+              </button>
             </div>
-            <div class="kkiri">
-                <button class="knn">
-                    <img src="../public/images/heros/kanan.png" alt="">
-                </button>
+            <div class="tali2">
+              <img src="../public/images/heros/26.png" alt="" />
             </div>
+            <div>
+              <button>
+                <img src="../public/images/heros/box.png" alt="" />
+              </button>
+              <button>
+                <img src="../public/images/heros/box.png" alt="" />
+              </button>
+              <button>
+                <img src="../public/images/heros/box.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="counters">
+            <div class="counter">
+              <h1>1</h1>
+            </div>
+          </div>
+          <div class="kkiri">
+            <button class="knn">
+              <img src="../public/images/heros/kanan.png" alt="" />
+            </button>
+          </div>
         </div>
+      </div>
+    </main>
 
-    </div>
-  </main>
-
-<!-- <script src="../scripts/quiz.js"></script>
+    <!-- <script src="../scripts/quiz.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../scripts/index.js" type="module"></script> -->
-<!-- SweetAlert CDN -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script>
-const imgUbah = document.querySelector('.ubah');
-const imgHlg1 = document.querySelector('.hlg1');
-const tali1 = document.querySelector('.tali1');
-const tali2 = document.querySelector('.tali2');
-const counterElement = document.querySelector('.counter h1');
-let hlg1ClickCount = 0; // Variabel untuk menghitung jumlah klik
+    <script>
+      const imgUbah = document.querySelector(".ubah");
+      const imgHlg1 = document.querySelector(".hlg1");
+      const tali1 = document.querySelector(".tali1");
+      const tali2 = document.querySelector(".tali2");
+      const counterElement = document.querySelector(".counter h1");
+      let hlg1ClickCount = 0; // Variabel untuk menghitung jumlah klik
 
-// Event listener untuk elemen .ubah
-imgUbah.parentElement.addEventListener('click', function() {
-    imgUbah.style.opacity = '0';
-    imgHlg1.style.opacity = '0.5';
-});
+      // Event listener untuk elemen .ubah
+      imgUbah.parentElement.addEventListener("click", function () {
+        imgUbah.style.opacity = "0";
+        imgHlg1.style.opacity = "0.5";
+      });
 
-// Event listener untuk elemen .hlg1
-imgHlg1.parentElement.addEventListener('click', function() {
-    // Mengubah opacity antara 0.5 dan 1
-    imgHlg1.style.opacity = imgHlg1.style.opacity === '0.5' ? '1' : '0.5';
+      // Event listener untuk elemen .hlg1
+      imgHlg1.parentElement.addEventListener("click", function () {
+        // Mengubah opacity antara 0.5 dan 1
+        imgHlg1.style.opacity = imgHlg1.style.opacity === "0.5" ? "1" : "0.5";
 
-    // Tambah jumlah klik setiap kali imgHlg1 diklik
-    hlg1ClickCount++;
+        // Tambah jumlah klik setiap kali imgHlg1 diklik
+        hlg1ClickCount++;
 
-    // Jika jumlah klik mencapai 1, sembunyikan tali2 dan tampilkan tali1
-    if (hlg1ClickCount === 1) {
-        tali1.style.display = 'block'; // Menampilkan tali1
-        tali2.style.display = 'none'; // Menyembunyikan tali2
-        counterElement.textContent = '2'; 
-        // Setelah 2 detik, ubah teks pada counter menjadi 2 dan tampilkan alert
-        setTimeout(() => {
-// Mengubah nilai counter menjadi 2
+        // Jika jumlah klik mencapai 1, sembunyikan tali2 dan tampilkan tali1
+        if (hlg1ClickCount === 1) {
+          tali1.style.display = "block"; // Menampilkan tali1
+          tali2.style.display = "none"; // Menyembunyikan tali2
+          counterElement.textContent = "2";
+          // Setelah 2 detik, ubah teks pada counter menjadi 2 dan tampilkan alert
+          setTimeout(() => {
+            // Mengubah nilai counter menjadi 2
 
             Swal.fire({
-                title: 'BETUL Jadi 2',
-                text: 'Coba Lihat Lagi Baloknya, masing2 2 kan :)',
-                icon: 'success',
-                confirmButtonText: 'Ciamik Mang'
+              title: "BETUL Jadi 2",
+              text: "Coba Lihat Lagi Baloknya, masing2 2 kan :)",
+              icon: "success",
+              confirmButtonText: "Ciamik Mang",
             });
 
             hlg1ClickCount = 0; // Reset counter setelah alert
-        }, 2000);
-    }
-});
-
-
-
-</script>
-</body>
-    
+          }, 2000);
+        }
+      });
+    </script>
+  </body>
 </html>
