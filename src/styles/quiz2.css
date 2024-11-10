@@ -1,0 +1,151 @@
+@font-face {
+  font-family: quick;
+  src: url(../public/font/flux.ttf);
+}
+@font-face {
+  font-family: gripen;
+  src: url(../public/font/gripen.ttf);
+}
+* {
+  font-family: quick;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #2f3542;
+}
+*:hover {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+}
+main {
+  width: 100%;
+  display: flex;
+}
+.bgs {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../public/images/heros/bgs2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  position: fixed;
+}
+.home {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 999;
+}
+.home:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+.home img {
+  width: 4rem;
+}
+.tex {
+  width: 100%;
+  padding: 1rem;
+  height: 100vh;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.tek {
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+}
+.teks {
+  width: 15rem;
+}
+.papan {
+  width: 25rem;
+}
+.kkiri {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0rem;
+  bottom: 3rem;
+  width: 100%;
+  padding: 1rem;
+}
+.kkiri button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.kkiri button:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+.kkiri button img {
+  width: 4rem;
+}
+.balok {
+  border: none;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  position: relative;
+  width: 25rem;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.balok button {
+  background-color: transparent;
+  border: none;
+}
+.hlg1 {
+  opacity: 0;
+}
+.balok img {
+  width: 5rem;
+  transition: opacity 0.3s ease;
+}
+.tali1 {
+  width: 100%;
+  display: none;
+}
+.tali1 img {
+  width: 100%;
+}
+.tali2 {
+  width: 100%;
+}
+.tali2 img {
+  width: 100%;
+}
+img {
+  pointer-events: none;
+}
+.counters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.counter {
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+}
+.counter h1 {
+  color: rgb(255, 255, 255);
+}
+.thu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}

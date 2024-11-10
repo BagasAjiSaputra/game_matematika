@@ -1,0 +1,153 @@
+@font-face {
+  font-family: quick;
+  src: url(../public/font/flux.ttf);
+}
+@font-face {
+  font-family: gripen;
+  src: url(../public/font/gripen.ttf);
+}
+* {
+  font-family: quick;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #2f3542;
+}
+*:hover {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+
+}
+main {
+  border: solid thin;
+  width: 100%;
+  display: flex;
+}
+.bgs {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../public/images/heros/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  position: fixed;
+  left: 0rem;
+}
+
+.tbl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.tbl1 {
+  margin-top: 3rem;
+}
+.tbl1, .tbl2, .tbl3 {
+  background-color: transparent;
+  transition: transform 0.3s ease;
+  border: transparent;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.tbl1:hover{
+  transform: scale(1.1) rotate(5deg);
+}
+.tbl2:hover{
+  transform: scale(1.1) rotate(5deg);
+}
+.tbl3:hover{
+  transform: scale(1.1) rotate(5deg);
+}
+.tbl1 img{
+  width: 15rem;
+}
+.tbl2 img{
+  width: 15rem;
+}
+.tbl3 img{
+  width: 15rem;
+}
+.soal {
+  display: flex;
+  justify-content: center;
+}
+.soal img{
+  width: 75%;
+}
+
+.home, .kanan, .kiri {
+  position: absolute;
+  z-index: 999;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.home img, .kanan img, .kiri img{
+  width: 4rem;
+}
+.home {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.kanan {
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+.kiri {
+  bottom: 0.5rem;
+  left: 0.5rem;
+}
+.home:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+.kanan:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+.kiri:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+.hero {
+  display: none;
+}
+.hero.active {
+  display: block;
+}
+.namas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%,50%);
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Orpix IO</title>
+    <link rel="icon" href="../public/images/heros/logos.png" sizes="any" />
+    <link
+      rel="preload"
+      href="../styles/main.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="../styles/main.css" /></noscript>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <button class="home">
+        <img src="../public/images/heros/home.png" alt="" />
+      </button>
+      <button class="kanan" onclick="showNextHero()">
+        <img src="../public/images/heros/kanan.png" alt="" />
+      </button>
+      <button class="kiri" onclick="showPreviousHero()">
+        <img src="../public/images/heros/kiri.png" alt="" />
+      </button>
+
+      <!-- Hero Sections -->
+      <section class="hero hero1 active">
+        <div class="namas">
+          <form action="" class="">
+            <input type="text" placeholder="Nama">
+          </form>
+        </div>
+      </section>
+
+      <!-- <section class="hero hero1 active">
+        <div class="bgs">
+          <div class="tbl">
+            <div class="soal">
+              <img src="../public/images/heros/s1.png" alt="" />
+            </div>
+            <button class="tbl1" onclick="checkAnswer('tbl1')">
+              <img src="../public/images/heros/s11.png" alt="" />
+            </button>
+            <button class="tbl2" onclick="checkAnswer('tbl2')">
+              <img src="../public/images/heros/s12.png" alt="" />
+            </button>
+            <button class="tbl3" onclick="checkAnswer('tbl3')">
+              <img src="../public/images/heros/s13.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Duplicate hero sections (hero2 to hero5) with the same structure as hero1 -->
+      <section class="hero hero2">
+        <div class="bgs">
+          <div class="tbl">
+            <div class="soal">
+              <img src="../public/images/heros/s2.png" alt="" />
+            </div>
+            <button class="tbl1" onclick="checkAnswer('tbl1')">
+              <img src="../public/images/heros/s21.png" alt="" />
+            </button>
+            <button class="tbl2" onclick="checkAnswer('tbl2')">
+              <img src="../public/images/heros/s22.png" alt="" />
+            </button>
+            <button class="tbl3" onclick="checkAnswer('tbl3')">
+              <img src="../public/images/heros/s23.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="hero hero3">
+        <div class="bgs">
+          <div class="tbl">
+            <div class="soal">
+              <img src="../public/images/heros/s3.png" alt="" />
+            </div>
+            <button class="tbl1" onclick="checkAnswer('tbl1')">
+              <img src="../public/images/heros/s31.png" alt="" />
+            </button>
+            <button class="tbl2" onclick="checkAnswer('tbl2')">
+              <img src="../public/images/heros/s32.png" alt="" />
+            </button>
+            <button class="tbl3" onclick="checkAnswer('tbl3')">
+              <img src="../public/images/heros/s33.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="hero hero4">
+        <div class="bgs">
+          <div class="tbl">
+            <div class="soal">
+              <img src="../public/images/heros/s4.png" alt="" />
+            </div>
+            <button class="tbl1" onclick="checkAnswer('tbl1')">
+              <img src="../public/images/heros/s41.png" alt="" />
+            </button>
+            <button class="tbl2" onclick="checkAnswer('tbl2')">
+              <img src="../public/images/heros/s42.png" alt="" />
+            </button>
+            <button class="tbl3" onclick="checkAnswer('tbl3')">
+              <img src="../public/images/heros/s43.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="hero hero5">
+        <div class="bgs">
+          <div class="tbl">
+            <div class="soal">
+              <img src="../public/images/heros/s5.png" alt="" />
+            </div>
+            <button class="tbl1" onclick="checkAnswer('tbl1')">
+              <img src="../public/images/heros/s51.png" alt="" />
+            </button>
+            <button class="tbl2" onclick="checkAnswer('tbl2')">
+              <img src="../public/images/heros/s52.png" alt="" />
+            </button>
+            <button class="tbl3" onclick="checkAnswer('tbl3')">
+              <img src="../public/images/heros/s53.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../scripts/index.js" type="module"></script>
+    <script>
+      let currentHero = 0;
+      const heroes = document.querySelectorAll(".hero");
+
+      function updateHeroVisibility(direction) {
+        heroes.forEach((hero, index) => {
+          hero.classList.remove("active");
+          hero
+            .querySelector(".bgs")
+            .classList.remove(
+              "slide-in-left",
+              "slide-in-right",
+              "slide-out-left",
+              "slide-out-right"
+            );
+
+          if (index === currentHero) {
+            hero.classList.add("active");
+            hero
+              .querySelector(".tbl")
+              .classList.add(
+                direction === "next" ? "slide-in-right" : "slide-in-left"
+              );
+          } else if (hero.classList.contains("active")) {
+            hero
+              .querySelector(".tbl")
+              .classList.add(
+                direction === "next" ? "slide-out-left" : "slide-out-right"
+              );
+          }
+        });
+      }
+
+      function showNextHero() {
+        currentHero = (currentHero + 1) % heroes.length;
+        updateHeroVisibility("next");
+      }
+
+      function showPreviousHero() {
+        currentHero = (currentHero - 1 + heroes.length) % heroes.length;
+        updateHeroVisibility("prev");
+      }
+
+      function checkAnswer(buttonClass) {
+        if (buttonClass === "tbl1") {
+          Swal.fire("Benar !", "Jawaban nya 2, Mantap", "success");
+        } else {
+          Swal.fire("Salah !", "Jawaban nya 2 yah, Semangat :]", "error");
+        }
+        document.querySelectorAll(".tbl button").forEach((button) => {
+          button.disabled = true;
+        });
+      }
+    </script>
+
+    <style>
+      .hero {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      .hero.active {
+        display: block;
+      }
+
+      .tbl {
+        opacity: 0;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+      }
+
+      /* Transition effects for sliding */
+      .slide-in-right {
+        transform: translateX(100%);
+        opacity: 1;
+        animation: slideInRight 0.5s forwards;
+      }
+
+      .slide-in-left {
+        transform: translateX(-100%);
+        opacity: 1;
+        animation: slideInLeft 0.5s forwards;
+      }
+
+      .slide-out-left {
+        animation: slideOutLeft 0.5s forwards;
+      }
+
+      .slide-out-right {
+        animation: slideOutRight 0.5s forwards;
+      }
+
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideOutLeft {
+        from {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+      }
+
+      @keyframes slideOutRight {
+        from {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+      }
+    </style>
+  </body>
+</html>
